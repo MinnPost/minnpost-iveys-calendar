@@ -1,0 +1,24 @@
+{
+  "name": "minnpost-iveys-calendar",
+  "version": "0.0.1",
+  "homepage": "https://github.com/MinnPost/minnpost-iveys-calendar",
+  "authors": [
+    "Alan Palazzolo <apalazzolo@minnpost.com>"
+  ],
+  "description": "Styles and code for embed Iveys Calendar",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "require": "*",
+    "almond": "~0.3.0",
+    "underscore": "~1.7.0",
+    "jquery": "~1.11"
+  }
+}
