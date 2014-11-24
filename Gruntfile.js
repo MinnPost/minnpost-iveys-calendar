@@ -90,6 +90,7 @@ module.exports = function(grunt) {
           mainConfigFile: 'js/config.js',
           out: 'dist/<%= pkg.name %>.js',
           optimize: 'none',
+          include: ['almond'],
           wrap: {
             startFile: 'js/build/wrapper.start.js',
             endFile: 'js/build/wrapper.end.js'

@@ -1,7 +1,13 @@
+/**
+ * Main parts for Ivey overrides.
+ */
 
-(function() {
+
+require(['jquery', 'underscore'], function($, _) {
+
   if (console) {
     console.log('HI');
-    
+
   }
-})();
+
+});
