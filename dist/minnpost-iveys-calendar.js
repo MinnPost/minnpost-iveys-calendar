@@ -12175,10 +12175,7 @@ define('jquery-noconflict',['jquery'], function($) {
 
 require(['jquery', 'underscore'], function($, _) {
 
-  if (console) {
-    console.log('HI');
 
-  }
 
 });
 

@@ -1,4 +1,190 @@
+/**
+ * Ivey resets
+ */
 
-#test-thing {
-  background-color: red;
+@import "_reset";
+
+
+// Mixins
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+@mixin reset_bg {
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+}
+@mixin reset_font {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.15em;
+}
+@mixin ss_font() {
+  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+
+
+// Styling
+html body {
+  @include reset_font();
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: 2em;
+  width: 100%;
+
+  .head_title,
+  .c_footer {
+    display: none;
+  }
+
+  // Dropdown thing
+  form .RadComboBoxDropDown.RadComboBoxDropDown_Black {
+    @include reset();
+    @include reset_bg();
+    @include reset_font();
+    font-size: 0.85em;
+
+    ul.rcbList {
+      padding: 0.5em 0.25em !important;
+
+      li {
+        padding: 0.15em 0.25em;
+      }
+
+      li.rcbHovered {
+        @include reset_bg();
+        background-color: #BDBDBD;
+        color: #FFFFFF !important;
+      }
+    }
+  }
+
+  // Date inputs
+  #dnn_ctr438_PerformanceCalendar_trDateRange {
+    .RadInput_Default input.riTextBox {
+      @include reset();
+      @include reset_bg();
+      @include reset_font();
+      @include ss_font();
+
+      border: 1px solid #222222;
+      padding: 0.25em 0.5em 0.15em 0.5em;
+      cursor: pointer;
+      width: 90% !important;
+    }
+
+    #dnn_ctr438_PerformanceCalendar_chkIntroAllDates {
+      margin-top: 1em;
+    }
+
+    label {
+      padding-left: 5px;
+      font-size: 0;
+
+      &:after {
+        @include reset_font();
+        font-size: 14px;
+        content: "or search all dates";
+      }
+    }
+
+    // Errors
+    #dnn_ctr438_PerformanceCalendar_vldIntroFromDate,
+    #dnn_ctr438_PerformanceCalendar_vldIntroToDate,
+    #dnn_ctr438_PerformanceCalendar_vldIntroDates {
+      display: block;
+      padding-top: 0.5em;
+      color: #C83D2D !important;
+    }
+  }
+
+  // Buttons
+  #dnn_ctr438_PerformanceCalendar_cmdIntroSearch {
+    @include reset();
+    @include reset_bg();
+    @include reset_font();
+    @include ss_font();
+
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 0.5em 1em;
+    line-height: 1.25em;
+    text-decoration: none;
+
+    background-color: #0084A8;
+    color: #FFFFFF;
+    border: 1px solid darken(#0084A8, 10%);
+  }
+
+  // Text in here is not wrapped
+  #dnn_ctr438_PerformanceCalendar_pnlIntro {
+    font-size: 0;
+
+    table {
+      font-size: 16px;
+      width: 100%;
+
+      tr {
+        display: block;
+        margin-bottom: 1em;
+
+        table tr {
+          display: table-row;
+        }
+
+        td {
+          display: block;
+          width: 100%;
+
+          &:first-child {
+            margin-bottom: 0.5em;
+            font-weight: bold;
+          }
+
+          table td {
+            display: table-cell;
+          }
+        }
+      }
+
+      // Go through each input
+      @each $i in ('#dnn_ctr438_PerformanceCalendar_rcbCompany', '#dnn_ctr438_PerformanceCalendar_rcbVenue', '#dnn_ctr438_PerformanceCalendar_rcbSearchFilter') {
+        div#{$i} {
+          @include reset();
+          @include reset_bg();
+          @include reset_font();
+
+          .rcbArrowCell.rcbArrowCellRight {
+            display: none;
+          }
+
+          .rcbInputCell.rcbInputCellLeft {
+            @include reset_bg();
+            @include reset();
+          }
+
+          input#{$i}_Input {
+            @include reset();
+            @include reset_bg();
+            @include reset_font();
+            @include ss_font();
+
+            border: 1px solid #222222;
+            padding: 0.25em 0.5em 0.15em 0.5em;
+            cursor: pointer;
+          }
+
+          .rcbHovered .rcbInputCell .rcbInput {
+            color: #222222 !important;
+          }
+        }
+      }
+    }
+  }
 }
