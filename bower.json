@@ -19,6 +19,7 @@
     "require": "*",
     "almond": "~0.3.0",
     "underscore": "~1.7.0",
-    "jquery": "~1.11"
+    "jquery": "~1.11",
+    "moment": "~2.8.4"
   }
 }

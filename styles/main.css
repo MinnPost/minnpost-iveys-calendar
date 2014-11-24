@@ -46,7 +46,8 @@ html body {
   width: 100%;
 }
 html body .head_title,
-html body .c_footer {
+html body .c_footer,
+html body hr {
   display: none;
 }
 html body form .RadComboBoxDropDown.RadComboBoxDropDown_Black {
@@ -109,7 +110,8 @@ html body #dnn_ctr438_PerformanceCalendar_trDateRange #dnn_ctr438_PerformanceCal
   padding-top: 0.5em;
   color: #C83D2D !important;
 }
-html body #dnn_ctr438_PerformanceCalendar_cmdIntroSearch {
+html body #dnn_ctr438_PerformanceCalendar_cmdIntroSearch,
+html body #dnn_ctr438_PerformanceCalendar_cmdSearchFilter {
   margin: 0;
   padding: 0;
   background-color: #FFFFFF;
@@ -133,139 +135,198 @@ html body #dnn_ctr438_PerformanceCalendar_cmdIntroSearch {
   color: #FFFFFF;
   border: 1px solid #005c75;
 }
+html body div#dnn_ctr438_PerformanceCalendar_rcbCompany {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.15em;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbCompany .rcbArrowCell.rcbArrowCellRight {
+  display: none;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbCompany .rcbInputCell.rcbInputCellLeft {
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbCompany input#dnn_ctr438_PerformanceCalendar_rcbCompany_Input {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.15em;
+  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  border: 1px solid #222222;
+  padding: 0.25em 0.5em 0.15em 0.5em;
+  cursor: pointer;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbCompany .rcbHovered .rcbInputCell .rcbInput {
+  color: #222222 !important;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbVenue {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.15em;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbVenue .rcbArrowCell.rcbArrowCellRight {
+  display: none;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbVenue .rcbInputCell.rcbInputCellLeft {
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbVenue input#dnn_ctr438_PerformanceCalendar_rcbVenue_Input {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.15em;
+  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  border: 1px solid #222222;
+  padding: 0.25em 0.5em 0.15em 0.5em;
+  cursor: pointer;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbVenue .rcbHovered .rcbInputCell .rcbInput {
+  color: #222222 !important;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.15em;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter .rcbArrowCell.rcbArrowCellRight {
+  display: none;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter .rcbInputCell.rcbInputCellLeft {
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter input#dnn_ctr438_PerformanceCalendar_rcbSearchFilter_Input {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  background-image: none;
+  color: #222222;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.15em;
+  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  border: 1px solid #222222;
+  padding: 0.25em 0.5em 0.15em 0.5em;
+  cursor: pointer;
+}
+html body div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter .rcbHovered .rcbInputCell .rcbInput {
+  color: #222222 !important;
+}
+html body #dnn_ctr438_PerformanceCalendar_cmdSearchGoBack {
+  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  color: #801019;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+html body #dnn_ctr438_PerformanceCalendar_cmdSearchGoBack:hover {
+  text-decoration: underline;
+}
+html body #dnn_ctr438_ModuleContent table:first-child {
+  width: 100%;
+}
+html body #dnn_ctr438_ModuleContent table:first-child tr {
+  display: block;
+  margin-bottom: 1em;
+}
+html body #dnn_ctr438_ModuleContent table:first-child tr table tr {
+  display: table-row;
+}
+html body #dnn_ctr438_ModuleContent table:first-child tr td {
+  display: block;
+  width: 100%;
+}
+html body #dnn_ctr438_ModuleContent table:first-child tr td:first-child {
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+html body #dnn_ctr438_ModuleContent table:first-child tr td table td {
+  display: table-cell;
+}
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearch1 td:first-child {
+  font-weight: normal;
+}
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateStart,
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd {
+  margin-bottom: 0.5em;
+}
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateStart td,
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd td {
+  display: table-cell;
+}
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateStart td:first-child,
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd td:first-child {
+  width: 20%;
+  padding-right: 0.5em;
+}
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateStart td:last-child,
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd td:last-child {
+  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+html body #dnn_ctr438_ModuleContent table + br + hr + br + table {
+  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  width: 100% !important;
+  font-size: 0.85em;
+}
+html body #dnn_ctr438_ModuleContent table + br + hr + br + table a {
+  color: #801019;
+  text-decoration: none;
+}
+html body #dnn_ctr438_ModuleContent table + br + hr + br + table a:hover {
+  text-decoration: underline;
+}
+html body #dnn_ctr438_ModuleContent table + br + hr + br + table tr:first-child td {
+  text-align: left !important;
+  vertical-align: bottom;
+  font-weight: bold;
+  font-size: 1.25em;
+  border-bottom: 2px solid #CCCCCC;
+}
+html body #dnn_ctr438_ModuleContent table + br + hr + br + table tr:nth-child(even) td {
+  background-color: #F8F8F8;
+}
+html body #dnn_ctr438_ModuleContent table + br + hr + br + table tr td {
+  padding: 0.25em;
+}
+html body #dnn_ctr438_ModuleContent table + br + hr + br + table tr td:first-child {
+  max-width: 22%;
+}
 html body #dnn_ctr438_PerformanceCalendar_pnlIntro {
   font-size: 0;
 }
 html body #dnn_ctr438_PerformanceCalendar_pnlIntro table {
   font-size: 16px;
-  width: 100%;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table tr {
-  display: block;
-  margin-bottom: 1em;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table tr table tr {
-  display: table-row;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table tr td {
-  display: block;
-  width: 100%;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table tr td:first-child {
-  margin-bottom: 0.5em;
-  font-weight: bold;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table tr td table td {
-  display: table-cell;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbCompany {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 1.15em;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbCompany .rcbArrowCell.rcbArrowCellRight {
-  display: none;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbCompany .rcbInputCell.rcbInputCellLeft {
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  margin: 0;
-  padding: 0;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbCompany input#dnn_ctr438_PerformanceCalendar_rcbCompany_Input {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 1.15em;
-  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  border: 1px solid #222222;
-  padding: 0.25em 0.5em 0.15em 0.5em;
-  cursor: pointer;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbCompany .rcbHovered .rcbInputCell .rcbInput {
-  color: #222222 !important;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbVenue {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 1.15em;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbVenue .rcbArrowCell.rcbArrowCellRight {
-  display: none;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbVenue .rcbInputCell.rcbInputCellLeft {
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  margin: 0;
-  padding: 0;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbVenue input#dnn_ctr438_PerformanceCalendar_rcbVenue_Input {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 1.15em;
-  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  border: 1px solid #222222;
-  padding: 0.25em 0.5em 0.15em 0.5em;
-  cursor: pointer;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbVenue .rcbHovered .rcbInputCell .rcbInput {
-  color: #222222 !important;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 1.15em;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter .rcbArrowCell.rcbArrowCellRight {
-  display: none;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter .rcbInputCell.rcbInputCellLeft {
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  margin: 0;
-  padding: 0;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter input#dnn_ctr438_PerformanceCalendar_rcbSearchFilter_Input {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  background-image: none;
-  color: #222222;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 16px;
-  line-height: 1.15em;
-  font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  border: 1px solid #222222;
-  padding: 0.25em 0.5em 0.15em 0.5em;
-  cursor: pointer;
-}
-html body #dnn_ctr438_PerformanceCalendar_pnlIntro table div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter .rcbHovered .rcbInputCell .rcbInput {
-  color: #222222 !important;
 }

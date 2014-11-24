@@ -34,7 +34,8 @@ html body {
   width: 100%;
 
   .head_title,
-  .c_footer {
+  .c_footer,
+  hr {
     display: none;
   }
 
@@ -100,7 +101,8 @@ html body {
   }
 
   // Buttons
-  #dnn_ctr438_PerformanceCalendar_cmdIntroSearch {
+  #dnn_ctr438_PerformanceCalendar_cmdIntroSearch,
+  #dnn_ctr438_PerformanceCalendar_cmdSearchFilter {
     @include reset();
     @include reset_bg();
     @include reset_font();
@@ -122,12 +124,54 @@ html body {
     border: 1px solid darken(#0084A8, 10%);
   }
 
-  // Text in here is not wrapped
-  #dnn_ctr438_PerformanceCalendar_pnlIntro {
-    font-size: 0;
+  // Select inputs
+  @each $i in ('#dnn_ctr438_PerformanceCalendar_rcbCompany', '#dnn_ctr438_PerformanceCalendar_rcbVenue', '#dnn_ctr438_PerformanceCalendar_rcbSearchFilter') {
+    div#{$i} {
+      @include reset();
+      @include reset_bg();
+      @include reset_font();
 
-    table {
-      font-size: 16px;
+      .rcbArrowCell.rcbArrowCellRight {
+        display: none;
+      }
+
+      .rcbInputCell.rcbInputCellLeft {
+        @include reset_bg();
+        @include reset();
+      }
+
+      input#{$i}_Input {
+        @include reset();
+        @include reset_bg();
+        @include reset_font();
+        @include ss_font();
+
+        border: 1px solid #222222;
+        padding: 0.25em 0.5em 0.15em 0.5em;
+        cursor: pointer;
+      }
+
+      .rcbHovered .rcbInputCell .rcbInput {
+        color: #222222 !important;
+      }
+    }
+  }
+
+  // Back button
+  #dnn_ctr438_PerformanceCalendar_cmdSearchGoBack {
+    @include ss_font();
+    color: #801019;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Layout
+  #dnn_ctr438_ModuleContent {
+    table:first-child {
       width: 100%;
 
       tr {
@@ -153,38 +197,80 @@ html body {
         }
       }
 
-      // Go through each input
-      @each $i in ('#dnn_ctr438_PerformanceCalendar_rcbCompany', '#dnn_ctr438_PerformanceCalendar_rcbVenue', '#dnn_ctr438_PerformanceCalendar_rcbSearchFilter') {
-        div#{$i} {
-          @include reset();
-          @include reset_bg();
-          @include reset_font();
+      // Some excepts
+      #dnn_ctr438_PerformanceCalendar_trProdSearch1 td:first-child {
+        font-weight: normal;
+      }
 
-          .rcbArrowCell.rcbArrowCellRight {
-            display: none;
-          }
+      #dnn_ctr438_PerformanceCalendar_trProdSearchDateStart,
+      #dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd {
+        margin-bottom: 0.5em;
 
-          .rcbInputCell.rcbInputCellLeft {
-            @include reset_bg();
-            @include reset();
-          }
+        td {
+          display: table-cell;
+        }
 
-          input#{$i}_Input {
-            @include reset();
-            @include reset_bg();
-            @include reset_font();
-            @include ss_font();
+        td:first-child {
+          width: 20%;
+          padding-right: 0.5em;
+        }
 
-            border: 1px solid #222222;
-            padding: 0.25em 0.5em 0.15em 0.5em;
-            cursor: pointer;
-          }
-
-          .rcbHovered .rcbInputCell .rcbInput {
-            color: #222222 !important;
-          }
+        td:last-child {
+          @include ss_font();
         }
       }
+    }
+  }
+
+  // Search results
+  #dnn_ctr438_ModuleContent table + br + hr + br + table {
+    @include ss_font();
+    width: 100% !important;
+    font-size: 0.85em;
+
+    a {
+      color: #801019;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    tr:first-child {
+
+      td {
+        text-align: left !important;
+        vertical-align: bottom;
+        font-weight: bold;
+        font-size: 1.25em;
+        border-bottom: 2px solid #CCCCCC;
+      }
+    }
+
+    tr:nth-child(even) td {
+      background-color: #F8F8F8;
+    }
+
+    tr {
+
+      td {
+        padding: 0.25em;
+      }
+
+      td:first-child {
+        max-width: 22%;
+      }
+    }
+  }
+
+
+  // Weird intro text
+  #dnn_ctr438_PerformanceCalendar_pnlIntro {
+    font-size: 0;
+
+    table {
+      font-size: 16px;
     }
   }
 }

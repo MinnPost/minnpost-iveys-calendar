@@ -24,6 +24,7 @@ require.config({
     'text': '../bower_components/text/text',
     'jquery': '../bower_components/jquery/dist/jquery',
     'underscore': '../bower_components/underscore/underscore',
+    'moment': '../bower_components/moment/moment',
     'jquery-noconflict': 'build/jquery-noconflict'
   }
 });
