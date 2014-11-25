@@ -98,7 +98,7 @@ html body {
       padding-left: 5px;
       font-size: 0;
 
-      &:after {
+      &::after {
         @include reset_font();
         font-size: 14px;
         content: "or search all dates";
@@ -150,6 +150,7 @@ html body {
       @include reset_bg();
       @include reset_font();
 
+      width: 90% !important;
       margin-right: 0 !important;
       margin-left: 0 !important;
 
@@ -160,6 +161,23 @@ html body {
       .rcbInputCell.rcbInputCellLeft {
         @include reset_bg();
         @include reset();
+        background-color: #FFFFFF !important;
+        background-image: none !important;
+        position: relative;
+
+        &::after {
+          @include reset_bg();
+          z-index: 10;
+          position: absolute;
+          text-align: right;
+          top: 3px;
+          right: -10px;
+          height: 20px;
+          content: "\25bc";
+          color: #BDBDBD;
+          display: inline;
+          cursor: pointer;
+        }
       }
 
       input#{$i}_Input {
