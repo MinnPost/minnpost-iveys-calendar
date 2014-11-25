@@ -382,6 +382,9 @@ html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCal
 html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd {
   margin-bottom: 1em;
 }
+html body #dnn_ctr438_ModuleContent table:first-child #dnn_ctr438_PerformanceCalendar_trProdSearch3 {
+  padding-top: 1em;
+}
 html body #dnn_ctr438_ModuleContent table + br + hr + br + table {
   font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
   width: 100% !important;
