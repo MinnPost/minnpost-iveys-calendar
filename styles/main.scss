@@ -109,8 +109,12 @@ html body {
     #dnn_ctr438_PerformanceCalendar_vldIntroFromDate,
     #dnn_ctr438_PerformanceCalendar_vldIntroToDate,
     #dnn_ctr438_PerformanceCalendar_vldIntroDates {
+      // We want block, but this gets inlined with JS on error
       display: block;
-      padding-top: 0.5em;
+      width: 100%;
+      clear: both;
+      float: left;
+      padding-top: 0.25em;
       color: #C83D2D !important;
     }
   }

@@ -118,7 +118,10 @@ html body #dnn_ctr438_PerformanceCalendar_trDateRange #dnn_ctr438_PerformanceCal
 html body #dnn_ctr438_PerformanceCalendar_trDateRange #dnn_ctr438_PerformanceCalendar_vldIntroToDate,
 html body #dnn_ctr438_PerformanceCalendar_trDateRange #dnn_ctr438_PerformanceCalendar_vldIntroDates {
   display: block;
-  padding-top: 0.5em;
+  width: 100%;
+  clear: both;
+  float: left;
+  padding-top: 0.25em;
   color: #C83D2D !important;
 }
 html body #dnn_ctr438_PerformanceCalendar_cmdIntroSearch,
