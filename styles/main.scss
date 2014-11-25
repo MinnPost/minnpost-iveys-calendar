@@ -146,6 +146,9 @@ html body {
       @include reset_bg();
       @include reset_font();
 
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+
       .rcbArrowCell.rcbArrowCellRight {
         display: none;
       }
@@ -212,7 +215,7 @@ html body {
         }
       }
 
-      // Some excepts
+      // Some exceptions
       #dnn_ctr438_PerformanceCalendar_trProdSearch1 td:first-child {
         font-weight: normal;
       }

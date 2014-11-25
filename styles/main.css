@@ -155,6 +155,8 @@ html body div#dnn_ctr438_PerformanceCalendar_rcbCompany {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   line-height: 1.15em;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 html body div#dnn_ctr438_PerformanceCalendar_rcbCompany .rcbArrowCell.rcbArrowCellRight {
   display: none;
@@ -192,6 +194,8 @@ html body div#dnn_ctr438_PerformanceCalendar_rcbVenue {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   line-height: 1.15em;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 html body div#dnn_ctr438_PerformanceCalendar_rcbVenue .rcbArrowCell.rcbArrowCellRight {
   display: none;
@@ -229,6 +233,8 @@ html body div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
   line-height: 1.15em;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 html body div#dnn_ctr438_PerformanceCalendar_rcbSearchFilter .rcbArrowCell.rcbArrowCellRight {
   display: none;
