@@ -210,7 +210,7 @@ module.exports = function(grunt) {
 
   // Watch tasks
   grunt.registerTask('watcher', ['default']);
-  grunt.registerTask('server', ['jshint', 'compass', 'browserSync', 'watch']);
+  grunt.registerTask('server', ['default', 'browserSync', 'watch']);
 
   // Deploy tasks
   grunt.registerTask('deploy', ['s3']);

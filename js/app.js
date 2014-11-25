@@ -5,11 +5,12 @@
 
 require(['jquery', 'underscore', 'moment'], function($, _, moment) {
 
+  // When all is loaded
   function styleIvey() {
 
     // Production search
     var $prodSearch = $('#dnn_ctr438_PerformanceCalendar_pnlSearch');
-    var $table, $swap;
+    var $table, $swap, $error;
     if ($prodSearch.size() > 0) {
       // Move button
       $table = $prodSearch.find('> table:first-child');
@@ -19,6 +20,15 @@ require(['jquery', 'underscore', 'moment'], function($, _, moment) {
       // Move back button
       $swap = $prodSearch.find('#dnn_ctr438_PerformanceCalendar_cmdSearchGoBack').parent().parent();
       $swap.prependTo($table);
+
+      // Move dates
+      $swap = $prodSearch.find('#dnn_ctr438_PerformanceCalendar_trProdSearch1');
+      $prodSearch.find('#dnn_ctr438_PerformanceCalendar_trProdSearchDateStart')
+        .insertBefore($swap);
+      $prodSearch.find('#dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd')
+        .insertBefore($swap);
+      $prodSearch.find('#dnn_ctr438_PerformanceCalendar_trProdSearchDateAll')
+        .insertBefore($swap);
 
       // Remove alignments
       $table = $($prodSearch.find('> table')[1]);
@@ -52,7 +62,21 @@ require(['jquery', 'underscore', 'moment'], function($, _, moment) {
           $td.html($td.html().replace(/\sat\s/ig, ' <br> at '));
         }
       });
+
+      // Rename button
+      $prodSearch.find('#dnn_ctr438_PerformanceCalendar_cmdSearchFilter').text('Filter');
+
+      // Handle errors
+      $error = $prodSearch.find('> span[style*="Red"]');
+      if ($error.size() > 0) {
+        $error.removeAttr('style').addClass('search-result-error')
+          .html($error.html() + '  Please go back and try a different search.')
+          .insertBefore($prodSearch);
+      }
     }
+
+    // Show once we are all ready
+    $('body').fadeIn();
   }
 
   $(document).ready(function() {

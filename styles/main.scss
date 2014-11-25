@@ -33,10 +33,25 @@ html body {
   padding-top: 2em;
   width: 100%;
 
+  // Hide until things are done.
+  display: none;
+
   .head_title,
   .c_footer,
   hr {
     display: none;
+  }
+
+  // Messages
+  .search-result-error {
+    @include reset();
+    @include ss_font();
+
+    display: block;
+    padding: .5em;
+    margin-bottom: 1em;
+    border: 1px solid transparent;
+    background-color: #fbd341;
   }
 
   // Dropdown thing
@@ -201,6 +216,13 @@ html body {
       #dnn_ctr438_PerformanceCalendar_trProdSearch1 td:first-child {
         font-weight: normal;
       }
+      #dnn_ctr438_PerformanceCalendar_trProdSearch1 {
+        margin-bottom: 0.5em;
+      }
+
+      #dnn_ctr438_PerformanceCalendar_trProdSearch2 td:first-child b {
+        display: none;
+      }
 
       #dnn_ctr438_PerformanceCalendar_trProdSearchDateStart,
       #dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd {
@@ -218,6 +240,9 @@ html body {
         td:last-child {
           @include ss_font();
         }
+      }
+      #dnn_ctr438_PerformanceCalendar_trProdSearchDateEnd {
+        margin-bottom: 1em;
       }
     }
   }
