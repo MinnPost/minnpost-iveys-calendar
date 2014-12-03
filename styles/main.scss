@@ -23,6 +23,19 @@
 @mixin ss_font() {
   font-family: 'Open Sans', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
+@mixin clearfix() {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
 
 
 // Styling
@@ -34,7 +47,9 @@ html body {
 
   // Hide until things are done.
   display: none;
+}
 
+body {
   .head_title,
   .c_footer,
   hr {
@@ -97,6 +112,10 @@ html body {
       padding-left: 5px;
       font-size: 0;
 
+      .ie8 & {
+        font-size: 1em;
+      }
+
       &::after {
         @include reset_font();
         font-size: 14px;
@@ -140,6 +159,10 @@ html body {
     background-color: #0084A8;
     color: #FFFFFF;
     border: 1px solid darken(#0084A8, 10%);
+
+    .ie8 & {
+      margin-top: 1em;
+    }
   }
 
   // Select inputs
@@ -217,13 +240,35 @@ html body {
         display: block;
         margin-bottom: 1em;
 
+        .ie8 &,
+        .ie9 & {
+          @include clearfix();
+          width: 100%;
+          float: left;
+          clear: left;
+        }
+
         table tr {
           display: table-row;
+
+          .ie8 &,
+          .ie9 & {
+            width: auto;
+            float: none;
+            clear: none;
+          }
         }
 
         td {
           display: block;
           width: 100%;
+
+          .ie8 &,
+          .ie9 & {
+            width: 100%;
+            float: left;
+            clear: left;
+          }
 
           &:first-child {
             margin-bottom: 0.5em;
@@ -232,6 +277,13 @@ html body {
 
           table td {
             display: table-cell;
+
+            .ie8 &,
+            .ie9 & {
+              width: auto;
+              float: none;
+              clear: none;
+            }
           }
         }
       }

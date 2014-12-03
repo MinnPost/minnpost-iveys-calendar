@@ -15109,8 +15109,20 @@ define('jquery-noconflict',['jquery'], function($) {
  * Main parts for Ivey overrides.
  */
 
-
 require(['jquery', 'underscore', 'moment'], function($, _, moment) {
+
+  // Mark IE, since we need some specific styles
+  var ieVersion = /(msie) ([\w.]+)/i.exec(navigator.userAgent);
+  ieVersion = (ieVersion) ? parseInt(ieVersion[2], 10) : false;
+  if (ieVersion) {
+    $('html').addClass('ie' + ieVersion);
+  }
+
+  // Make sure can be responsive
+  $('<meta>')
+    .attr('name', 'viewport')
+    .attr('content', 'width=device-width, initial-scale=1')
+    .appendTo('head');
 
   // When all is loaded
   function styleIvey() {
